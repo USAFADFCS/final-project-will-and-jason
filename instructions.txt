@@ -1,0 +1,3 @@
+We have a web app that runs our program. To run this, type the following command into the terminal: 
+"streamlit run app.py". You may have to download streamlit with the command: "pip install streamlit".
+If you would only like to see the reults in the terminal, run the command "python manager_agent.py".
