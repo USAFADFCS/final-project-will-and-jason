@@ -7,7 +7,7 @@ from tools.workout_planner_tool import WorkoutPlannerTool
 import asyncio
 
 async def build_agent():
-    llm = OpenAIAdapter()   # Loads OpenAI key from .env automatically
+    llm = OpenAIAdapter()  # Loads OpenAI key from .env automatically
 
     registry = ToolRegistry()
     registry.register_tool(WorkoutPlannerTool())

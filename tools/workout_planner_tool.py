@@ -1,6 +1,7 @@
 from typing import Dict
+from fairlib.core.interfaces.tools import AbstractTool
 
-class WorkoutPlannerTool:
+class WorkoutPlannerTool(AbstractTool):
     """
     Creates a workout plan based on user goals and schedule.
     """
@@ -11,7 +12,7 @@ class WorkoutPlannerTool:
         "{'days': int, 'goal': 'strength'|'hypertrophy'|'endurance'}"
     )
 
-    async def use(self, tool_input: str) -> str:
+    def use(self, tool_input: str) -> str:
         data: Dict = eval(tool_input)  # FAIR tools expect string input
         days = int(data.get("days", 3))
         goal = data.get("goal", "hypertrophy")
